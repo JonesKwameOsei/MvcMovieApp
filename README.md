@@ -25,12 +25,6 @@ A modern web application built with .NET 9 and Razor Pages, delivering fast, sec
   - [💻 Usage Examples](#-usage-examples)
     - [Basic Page Model](#basic-page-model)
     - [Form Handling](#form-handling)
-  - [🚀 Deployment](#-deployment)
-  - [🧪 Testing](#-testing)
-  - [📚 API Reference](#-api-reference)
-  - [🤝 Contributing](#-contributing)
-  - [❓ FAQ](#-faq)
-  - [📞 Support](#-support)
   - [🙏 Acknowledgments](#-acknowledgments)
 
 ---
@@ -65,3 +59,63 @@ This project leverages the latest .NET 9 framework with Razor Pages to create a 
 ---
 
 ## 🏗️ Architecture
+
+This application follows a clean, layered architecture pattern optimized for Razor Pages:
+
+### Architecture Principles
+
+- **Page-Centric Design**: Each page handles its own model and logic
+- **Dependency Injection**: Built-in DI container for loose coupling
+- **Separation of Concerns**: Clear boundaries between presentation, business, and data layers
+- **Convention over Configuration**: Leverage ASP.NET Core conventions
+
+---
+
+## 🛠️ Prerequisites
+
+Before running this application, ensure you have the following installed:
+
+| Requirement | Version | Download Link |
+|-------------|---------|---------------|
+| **.NET SDK** | 9.0 or later | [Download .NET 9](https://dotnet.microsoft.com/download/dotnet/9.0) |
+| **Visual Studio** | 2022 (v17.8+) | [Download VS 2022](https://visualstudio.microsoft.com/vs/) |
+| **SQL Server** | LocalDB/Express | [Download SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) |
+| **Git** | Latest | [Download Git](https://git-scm.com/downloads) |
+
+### Optional Tools
+- **Visual Studio Code** with C# extension
+- **SQL Server Management Studio (SSMS)**
+- **Postman** for API testing
+
+---
+
+## ⚡ Quick Start
+
+### Installation
+
+1. **Clone the repository**
+````````
+git clone https://github.com/yourusername/dotnet9-razor-pages-project.git
+````````
+
+2. **Restore dependencies**
+````````
+cd dotnet9-razor-pages-project
+dotnet restore
+````````
+
+3. **Update database** (if using Entity Framework)
+````````
+dotnet ef database update
+````````
+
+4. **Build the project**
+````````
+dotnet build
+````````
+
+### Running the Application
+
+1. **Using .NET CLI**
+````````
+dotnet run
