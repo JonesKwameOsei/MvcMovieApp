@@ -6,14 +6,19 @@ namespace MvcMovie.Models;
 public class Movie
 {
     public int Id { get; set; }
+
+    [StringLength(60, MinimumLength = 3), Required]
     public string? Title { get; set; }
 
-    [Display(Name = "Release Date")]
-    [DataType(DataType.Date)]
+    [Display(Name = "Release Date"), DataType(DataType.Date)]
     public DateTime ReleaseDate { get; set; }
-    public string? Genre { get; set; }
-    [Column(TypeName = "decimal(5, 2)")]
-    [Range(0.01, 999.99, ErrorMessage = "Price must be between £0.01 to £999.99")]
+
+    [Range(1, 100, ErrorMessage = "Price must be between £1 to £100"), Column(TypeName = "decimal(5, 2)"), DataType(DataType.Currency)]
     public decimal Price { get; set; }
+
+    [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$"), Required, StringLength(30)]
+    public string? Genre { get; set; }
+
+    [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$"), StringLength(5)]
     public string? Rating { get; set; }
 }
