@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MvcMovie.Models;
@@ -16,4 +15,5 @@ public class Movie
     [Column(TypeName = "decimal(5, 2)")]
     [Range(0.01, 999.99, ErrorMessage = "Price must be between £0.01 to £999.99")]
     public decimal Price { get; set; }
+    public string? Rating { get; set; }
 }
